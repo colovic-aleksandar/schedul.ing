@@ -1,0 +1,132 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./homePage.scss";
+
+html {
+    overflow-y: hidden;
+}
+
+.users__list {
+    background-color: $whitebg;
+    border-radius: 10px;
+    height: 90vh;
+    // overflow-y: scroll;
+
+    h3 {
+        margin-left: 20px;
+        padding-top: 20px;
+        color: $textGray;
+        font-family: Poppins;
+        font-weight: $boldWeight;
+    }
+
+    #search {
+        font-family: 'FontAwesome', sans-serif;
+        height: 30px;
+        width: 200px;
+        margin: 0px;
+        border: 0px;
+        border-radius: 10px;
+       background-color: $lightGray;
+        color: $iconGray;
+        width: 120px;
+        text-align: center;
+
+        &::placeholder {
+            text-align: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: 0px;
+            outline: none;
+        }
+
+    }
+
+    .card {
+        background-color: $cardGrey;
+        border: none;
+        border-radius: 10px;
+        // overflow-y: scroll !important;
+
+        h4 {
+            margin-top: 17px;
+            justify-content: center;
+            font-family: Poppins;
+            font-weight: $boldWeight;
+        }
+
+        h5 {
+            color: $iconGray;
+            margin-top: 17px;
+            font-family: Poppins;
+            font-weight: $lightWeight;
+        }
+
+        span {
+            color: $iconGray;
+            font-weight: $mediumWeight;
+        }
+
+        .avatar {
+            margin-top: 37px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 100px;
+            width: 100px;
+            border: 1px solid $enjoyingBlue;
+            border-radius: 50px;
+
+            &__button {
+                font-family: Poppins;
+                margin-bottom: 7px;
+                background-color: $enjoyingBlue;
+                border-radius: 20px;
+                border: none;
+                outline: none !important;
+                padding: 8px 40px;
+                color: $activeEnjoyingBlue;
+            }
+        }
+
+        .hnumber {
+            margin-right: 26px;
+            padding-right: 41px;
+            padding-left: 8px;
+        }
+
+        .anumber {
+            margin-right: 42px;
+            margin-left: -4px;
+        }
+    }
+}
+
+.align {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .wrapper__main {
+        padding-bottom: 20px !important;
+    }
+
+    .users__list {
+        margin-top: 20px;
+        padding-bottom: 20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .mt-4 {
+            margin-top: 1.25rem !important;
+        }
+    }
+}

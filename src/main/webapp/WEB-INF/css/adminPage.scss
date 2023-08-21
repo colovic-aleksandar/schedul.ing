@@ -1,0 +1,296 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './homePage.scss';
+
+.btns {
+    i {
+        color: $linkBlue;
+        &:hover
+        { 
+            opacity:0.5;
+        }
+    }
+}
+
+input {
+    background-color: $whitebg;
+    border: 0;
+    border-bottom: 1px solid;
+    color: $black;
+    :active{
+        border: 0;
+        border-bottom: 1px solid $black;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+table {
+    position: relative;
+}
+
+th {
+    position: sticky;
+    top: -.125rem;
+    background-color: $whitebg;
+}
+
+th, tr, td {
+    color: $black;
+}
+
+button.btn-primary
+{
+    background-color: $enjoyingBlue;
+    border: 0;
+    border-radius: .625rem;
+    &:hover{
+        background-color: $lightBlue;
+    }
+}
+
+.manageModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+.confirmModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+
+    &__buttonAccept{
+        display: none;
+    }
+}
+
+section.modal-content {
+    background-color: $whitebg;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* 15% from the top and centered */
+    padding: 1.25rem;
+    border: 1px solid rgba(0,0,0,.2);
+    height: 450px;
+    width: 360px;
+    color:$linkBlue;
+    /* Could be more or less, depending on screen size */
+}
+
+section.modal-content-confirm{
+    background-color: $whitebg;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* 15% from the top and centered */
+    padding: 1.25rem;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    height: 230px;
+    width: 360px;
+    color:$linkBlue;
+}
+
+.confirmModal__buttonAccept{
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin: .625rem;
+    color: #fff;    
+    font-size: $largeFont;
+    background-color: $enjoyingBlue;
+    border-radius: .625rem;
+    &:hover{
+        background-color: $lightBlue;
+    }
+}
+
+.confirmModal__buttonCancel{
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin: .625rem;
+    color: #fff;
+    font-size: $largeFont;    
+    background-color: $enjoyingBlue;
+    border-radius: .625rem;
+    &:hover{
+        background-color: $lightBlue;
+    }
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    right: 0px;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: $whitebg;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.btn:focus {
+    box-shadow: none;
+}
+.disabled
+{
+    opacity:0.5;
+}
+
+.wrapper {
+    &__admin {
+        position: relative;
+        background-color: $whitebg;
+        border-radius: 10px;
+        height: 90vh;
+        padding: 10px;
+    }
+}
+.admin{
+    &__container{
+        margin-top: 3.125rem;
+        height: 80%;
+        &_swapButtons{
+            height: 10%;
+            &--btnEvents{
+                background-color: $enjoyingBlue;
+                height: 100%;
+                border: none;
+                width: 100px;
+                float: left;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color:$gwhite;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            &--btnUsers{
+                background-color: $enjoyingBlue;
+                height: 100%;
+                border: none;
+                float: left;
+                width: 100px;
+                color:$gwhite;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            &--btnEventTypes{
+                background-color: $enjoyingBlue;
+                height: 100%;
+                border: none;
+                float: left;
+                width: 100px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                color:$gwhite;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &_tableContainer{
+            height: 90%;
+            overflow-y: scroll;
+            &--schedulesTable{
+                display: none;
+            }
+            &--usersTable{
+                display: none;
+            }
+            &--eventsTable{
+                display: none;
+            }
+        }
+    }
+}
+
+button.admin__container_swapButtons--btnUsers, button.admin__container_swapButtons--btnEventTypes,
+button.admin__container_swapButtons--btnEvents {
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.tableShown{
+    display: table;
+}
+
+.activeButton{
+    background-color: $lightBlue;
+}
+
+@media (max-width: $tablet){
+    .wrapper {
+        &__main {
+            padding: 0 1rem;
+            height: 690px;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+        &__admin {
+            position: relative;
+            background-color: $whitebg;
+            border-radius: 10px;
+            height: 100%;
+            padding: 10px;
+        }
+    }
+    .admin{
+        &__container{
+            &_swapButtons{
+                &--btnEvents{
+                    width: 75px;
+                }
+                &--btnUsers{
+                    width: 75px;
+                }
+                &--btnEventTypes{
+                    width: 75px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,200 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./homePage.scss";
+
+
+.close {
+    cursor: pointer;
+}
+
+.users_page{
+    position: relative;
+    top: 1.875rem;
+}
+.users__list {
+    background-color: $whitebg;
+    border-radius: .625rem;
+    height: 90vh;
+    h3 {
+        margin-left: 1.25rem;
+        padding-top: 1.25rem;   
+    }
+    #search {
+        font-family: 'FontAwesome', sans-serif;
+        height: 30px;
+        width: 200px;
+        margin: 0;
+        border: 0;
+        border-radius: .625rem;
+        background-color: $lightGray;
+        color: $iconGray;
+        width: 120px;
+        text-align: center;
+        &::placeholder {
+            text-align: center;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {
+            border: 0;
+            outline: none;
+        }
+    }
+    .card {
+        background-color: $cardGrey;
+        border: none;
+        border-radius: .625rem;
+        h4 {
+            justify-content: center;
+            font-weight: $boldWeight;
+        }
+        h5 {
+            color: $iconGray;
+            font-weight: $lightWeight;
+        }
+        span {
+            color: $iconGray;
+            font-weight: $mediumWeight;
+        }
+        .avatar {
+            margin-top: 2.3125rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 100px;
+            width: 100px;
+            border: 1px solid $enjoyingBlue;
+            border-radius: 50px;
+        }
+        .hnumber {
+            position: relative;
+            right: 3rem;
+            margin-top: .625rem;
+            top: .3125rem;
+        }
+        .anumber {
+            top: .3125rem;
+            right: .4375rem;
+            position: relative;
+            margin-top: .625rem;
+        }
+    }
+}
+
+button.avatar__button {
+    margin-bottom: .4375rem;
+    background-color: $enjoyingBlue;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: .5rem 2.5rem;
+    color: $activeEnjoyingBlue;
+}
+
+.align {
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Sit on top */
+    padding-top: 6.25rem;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+::-webkit-scrollbar {
+    width: .625rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $whitebg ;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $darkBlue ;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $lightBlue ;
+  }
+
+div.modal-content {
+    background-color: $whitebg; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem;
+    border: 1px solid #888;
+    height: 400px;
+    width: 500px;
+    /* Could be more or less, depending on screen size */
+    p {
+        text-align: center;
+    }
+    h5 {
+        text-align: center;
+        font-weight: $boldWeight;
+    }
+}
+
+.name,.surname,.hnumber,.anumber{
+    font-weight: 700;
+    font-size: 1.72rem;
+}
+
+ul > li.list-group-item {
+    background-color:  $whitebg; 
+}
+
+button.avatar__button:hover{
+    background-color: $lightBlue;
+    color:  $white;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper__main {
+        padding-bottom: 1.25rem;
+    }
+    .users__list {
+        margin-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        height: 750px;
+        h3 {
+            font-size: 1.72rem;
+        }
+    }
+    .anumber{
+        right: 0;
+        left: -.625rem;
+    }
+    .hnumber{
+        right: 0;
+        left: -2.6875rem;
+       
+    }
+    div.modal-content {
+        padding: 1rem;
+        height: 400px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,288 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./homePage.scss";
+
+.fc-theme-standard td, .fc-theme-standard th{
+    border:1px solid $lightGray;
+}
+input, select {
+    &:active,&:focus{
+       outline-color: $enjoyingBlue;
+    }
+    i {
+        color:$black;
+    }
+}
+.events__list {
+    table a{
+        color: $linkEnjoyingBlue;
+        text-decoration: none;
+    }
+    background-color: $whitebg;
+    border-radius: 10px;
+    height: 90vh;
+    h3 {
+        margin-left: 1rem;
+        padding-top: 1.25rem;
+        font-weight: $boldWeight;
+    }
+    #calendar {
+        width: 100%;
+        height: 60%;
+    }
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 2;
+        /* Sit on top */
+        padding-top: 6.25rem;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+    .modal-content {
+        background-color: $whitebg;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        /* 15% from the top and centered */
+        padding: 1.25rem;
+        border: 1px solid #888;
+        width: 50%;
+        /* Could be more or less, depending on screen size */
+    }
+    .close {
+        color: #aaaaaa;
+        float: right;
+        right: 0px;
+        font-size: 1.75rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}
+hr {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+div.wrapper__findUsers {
+    margin-top: .9375rem;
+    height: 93px;
+    overflow-y: scroll;
+}
+
+div.wrapper__width {
+    margin-right: 0; 
+    padding-bottom: .9375rem;
+}
+
+span.wrapper__spanBold {
+    font-weight: bold;
+}
+
+section.modal-content.wrapper__contentWidth {
+    width: 30%;
+}
+
+.wrapper {
+    &__search {
+        width: 100%;
+    }
+    &__all {
+        float: right;
+        font-size: .75rem;
+    }
+    &__all:hover {
+        cursor: pointer;
+    }
+    &__btnSub {
+        margin-left: .9375rem;
+    }
+    &__searchPhoto{
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        margin-left: .625rem;
+        margin-right: .625rem;
+    }
+    &__fullName{
+        margin-bottom: 0;
+    }
+}
+
+.fc-button-primary {
+    background-color: $enjoyingBlue !important;
+    border: 0 !important;
+    
+    &:focus {
+        box-shadow: none !important;
+        background-color: $enjoyingBlue !important;
+    }
+
+    &:first-child {
+        border-radius: 10px 0px 0px 10px !important;
+    }
+
+    &:last-child {
+        border-radius:  0px 10px 10px 0px !important;
+    }
+}
+
+.fc-today-button {
+    opacity: 1 !important;
+    background-color: $primaryBlue !important;
+}
+
+.fc-button-active {
+    background-color: $lightBlue !important;
+    &:active,&:focus{
+        background-color: $lightBlue !important;
+    }
+}
+
+.fc-day-today {
+    border: 2px solid rgba(16, 167, 236, .2) !important;
+    background-color: $ultralightBlue !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $whitebg ;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $darkBlue ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $lightBlue ;
+}
+
+@media (max-width: $tablet) {
+    body{
+        font-size: $regularFont-sm !important;
+    }
+    .events__list{
+        margin-top: 1.25rem;
+        height: 700px;
+    }
+    .modal-content{
+        min-width: 70%;
+    }
+    .fc-media-screen{
+        height: 90vh !important;
+    }
+    .fc-header-toolbar{
+        display: block !important;
+    }
+    .fc-toolbar-chunk{
+        &:first-child{
+            display: inline-block;
+        }
+        &:nth-child(2) {
+            font-size: .5rem;
+            float: right;
+            margin-top: .3125rem;
+            @media (max-width: 320px) {
+                font-size: $smallFont-sm;
+                margin-top: .4375rem;
+            }
+        }
+        &:nth-child(3) {
+            display: block;
+            margin-top: .625rem;
+        }
+    }
+}
+    
+
+small:hover{
+    cursor: pointer;
+}
+
+select.form-control, input.form-control {   
+    border: 1px solid #ced4da;
+    background-color: $whitebg;
+    color: $black;
+    &::placeholder{
+        color: $black;
+    }
+}
+.fc-event-title-container{
+    background-color: $enjoyingBlue;
+    border-color:$primaryBlue;
+}
+button.btn-primary
+{
+    background-color: $enjoyingBlue;
+    border: 0px;
+    border-radius: 10px;
+    &:hover{
+        background-color:$lightBlue;
+    }
+}
+
+.page-loader {
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Sit on top */
+
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: $whitebg;
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+    // transition: 0.85s ease-out;
+    top: 0%;
+
+}
+
+.done {
+    visibility: hidden;
+    opacity: 0;
+}
+.fc-theme-standard .fc-list-day-cushion {
+    background-color: $whitebg!important;
+    color:$black!important;
+}
+
+.fc-h-event{
+    border:0px!important;
+    padding: .1875rem .625rem !important;
+    background: $enjoyingBlue!important;
+}
+.dropdown-item:hover{
+    background-color: $lightBlue!important;
+}

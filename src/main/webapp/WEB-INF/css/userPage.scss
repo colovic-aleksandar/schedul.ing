@@ -1,0 +1,201 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./homePage.scss";
+
+menu.white
+{
+  background-color: $whitebg; 
+}
+
+.dropdown-item{
+    color: $black;
+    &:hover{
+        background-color: $whitebg;
+    }
+    
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $whitebg ;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $darkBlue ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $lightBlue ;
+}
+
+.btn-primary
+{
+    background-color: $enjoyingBlue;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: $lightBlue;
+    border-radius: .625rem;
+    &:hover{
+        background-color:$lightBlue;
+        span {
+          i {
+                color: $whitebg;
+          }
+        }
+    }
+}
+
+.fontAwesome {
+  background-color: $inputGray;
+  padding-left: .625rem;
+  font-family: Arial, FontAwesome;
+  margin: .625rem;
+  background-color: $inputGray;
+  border:$white;
+  border-radius: .5rem;
+  width: 270px;
+  height: 40px;
+  outline: none;
+  &::placeholder {
+    color: $iconGray;
+  }
+}
+
+input.wrapper__input {
+  width: 180px;
+  &--wide {
+    width: 380px;
+    text-align: center;
+  }
+}
+
+p {
+  font-weight: 500;
+}
+
+button.btn.btnBadge.wrapper__btnBadge {
+  position: absolute;
+  margin-top: 1.25rem;
+  margin-left: -2.1875rem;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  background-color:  $whitebg;
+  border: 1px solid $enjoyingBlue;
+  span {
+    padding-left: .1875rem;
+    background-color: $whitebg;
+    color: $black;
+  }
+}
+
+button.btn.wrapper__btn {
+  width: 150px;
+  &--edit {
+    background-color: $enjoyingBlue;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+.wrapper {
+  &__main {
+    background: linear-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  &__fullName {
+    font-size: 2.3rem;
+      text-align: center;
+      
+  }
+
+  &__container {
+    text-align: center;
+  }  
+
+  &__user {
+    position: relative;
+    background-color: $whitebg;
+    border-radius: 10px;
+    height: 90%;
+  }
+
+  &__photo {
+    position: relative;
+    border: 2px solid $enjoyingBlue;
+    border-radius: 50%;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    width: 200px;
+    height: 200px;
+  }
+  &__wraper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__headerPhoto {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+  }
+  &__edit {
+    background: $white;
+    height: 100%;
+    h2 {
+      font-weight: $boldWeight;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  input.wrapper__input, select.wrapper__input {
+    width: 200px;
+    margin-top: .3125rem;
+    margin-bottom: .3125rem;
+    &--wide {
+      width: 200px;
+      text-align: left;
+      margin: 0;
+    }
+  }
+  .wrapper {
+    &__main{ 
+      height: 750px;
+      font-weight: 500;
+    }
+    &__user {
+      margin-top: 1rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    &__fullName {
+      text-align: center;
+    }
+    &__edit {
+      margin-top: 3rem;
+      padding-top: 3.125rem;
+      padding-bottom: 2.5rem;
+      border-radius: 10px;
+      height: 90%;
+    }
+    &__photo {
+      width: 150px;
+      height: 150px;
+    }
+    &__btn {
+      margin-top: .5rem;
+    }
+  }
+}

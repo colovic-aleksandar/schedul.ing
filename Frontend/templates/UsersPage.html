@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+    <html lang="en" data-mode="light">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/usersPage.css">
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="../resources/favicon-32x32.png" sizes="32x32" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- font awesome css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../resources/css/all.css" />
+
+    <!-- hamburgers css -->
+    <link href="../Resources/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- DATEDROPPER AND JQERY -->
+    <link rel="stylesheet" href="../css/datedropper.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="../js/datedropper.js"></script>
+<!-- Animate CSS CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Schedul.ing</title>
+</head>
+
+<body>
+    <div class="wrapper__homepage">
+        <aside class="wrapper__dashboard">
+            <div class="wrapper__dashboard_toggle">
+                <header class="wrapper__dashboard_header">
+                    <img id="asset" src="../resources/enjoying logo/2x/asset.png" alt="Logo" class="wrapper__dashboard_header_logo"
+                    width="150px" height="auto" />
+                </header>
+                <button class="navbar-toggler hamburger--spring wrapper__dashboard_toggle--button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="collapseContainer" id="navbarToggleExternalContent">
+                <div class="dropdown wrapper__main_nav--buttonContainer-sd">
+                    <button class="btn wrapper__main_nav--button-sd" type="button">
+                        <div class="wrapper__main_nav--avatar-sd"></div>
+                        <a href="./UserPage.html" class="wrapper__main_nav--button-sd-text">Avatar Aang</a>
+                    </button>
+                </div>
+                <div class="wrapper__dashboard_home sidebarLinkContainer">
+                    <i class="far fa-list-alt wrapper__dashboard_home--icon sidebarIcon"></i>
+                    <a class="wrapper__dashboard_home--text sidebarLink" href="./HomePage.html">Dashboard</a>
+                </div>
+                <div class="wrapper__dashboard_events sidebarLinkContainer">
+                    <i class="far fa-calendar wrapper__dashboard_events--icon sidebarIcon"></i>
+                    <a class="wrapper__dashboard_events--text sidebarLink" href="./eventsPage.html">Events</a>
+                </div>
+                <div class="wrapper__dashboard_users sidebarLinkContainer selected">
+                    <i class="fas fa-users wrapper__dashboard_users--icon sidebarIcon selected"></i>
+                    <a class="wrapper__dashboard_users--text sidebarLink selected" href="./UsersPage.html">Users</a>
+                </div>
+                <div class="wrapper__dashboard_logout sidebarLinkContainer">
+                    <i class="fas fa-long-arrow-alt-left wrapper__dashboard_logout--icon sidebarIcon"></i>
+                    <a class="wrapper__dashboard_logout--text sidebarLink" href="../templates/Form.html">Logout</a>
+                </div>
+            </div>
+        </aside>
+        <div class="wrapper__main px-3">
+            <nav class="navbar wrapper__main_nav">
+                <div class="dropdown wrapper__main_nav--buttonContainer">
+                    <button class="btn wrapper__main_nav--button" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="inverted">Avatar Aang</span>
+                        <div class="wrapper__main_nav--avatar">
+
+                        </div>
+                    </button>
+                    <div class="dropdown-menu white " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="../templates/UserPage.html">View Profile</a>
+                        <a class="dropdown-item " href="logout">Log Out</a>
+                        <a id="button-check"  class="dropdown-item  white-font" href="#">
+                            <span id="off-on" class=""></span> Dark Mode
+                        </a>
+                        
+                    </div>
+                </div>
+            </nav>
+            <div id="container" class="users__list overflow-auto ">
+                <div class="users__list  animate__animated animate__slow animate__delay-1s animate__fadeIn">
+
+
+                    <div class="row mx-3  d-flex justify-content-between position-sticky white  ">
+                        <h3>Users List</h3>
+                        <input type="text" name="" id="search" class="mt-4 mr-3" placeholder="&#xf002; Search">
+                    </div>
+                    <div class="row m-3 " id="users">
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <img class="avatar" src="../Resources/MicrosoftTeams-image.png" alt="">
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Aleksandar Colovic</h4>
+                                <span class="d-flex justify-content-center align mx-3">Frontend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Aleksandar Antic </h4>
+                                <span class="d-flex justify-content-center align mx-3">Frontend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Milan Stamenkovic </h4>
+                                <span class="d-flex justify-content-center align mx-3">Sidebar Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Stefan Cvetkovic </h4>
+                                <span class="d-flex justify-content-center align mx-3">Frontend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Stefan Tasic </h4>
+                                <span class="d-flex justify-content-center align mx-3">Backend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Katarina </h4>
+                                <span class="d-flex justify-content-center align mx-3">Backend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Aleksandra</h4>
+                                <span class="d-flex justify-content-center align mx-3">Backend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 d-flex px-3 mb-3 user">
+                            <div class="card flex-fill ">
+                                <div class="avatar">
+                                </div>
+
+                                <h4 class="d-flex justify-content-center align mx-3 name">Nevena </h4>
+                                <span class="d-flex justify-content-center align mx-3">Backend Developer</span>
+
+                                <div class="row d-flex justify-content-center ml-2">
+                                    <h4 class="hnumber">3</h4>
+                                    <h4 class="anumber">5</h4>
+
+                                </div>
+                                <div class="row d-flex justify-content-center ml-2 ">
+                                    <span class="mr-4">hosts</span>
+                                    <span class="mr-4">attends</span>
+                                </div>
+                                <div class="row d-flex justify-content-center m-3">
+                                    <button type="button" class="avatar__button">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="loader" class="page-loader">
+            <div id="lottie"></div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+        <script src="../js/darkmode.js"></script>
+        <script src="../js/pageLoader.js"></script>
+        <script src="../js/UsersPage.js"></script>
+        <script src="../js/sidebar.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

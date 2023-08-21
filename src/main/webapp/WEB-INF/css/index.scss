@@ -1,0 +1,225 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important; 
+}
+
+.emailInputCheckup{
+  color: #fff;
+}
+
+.fontAwesome {
+  color: black;
+  padding-left: 10px;
+  font-family: Arial, FontAwesome;
+  margin: .625rem;
+  border: white;
+  border-radius: 8px;
+  width: 270px;
+  height: 40px;
+  outline: none;
+  &::placeholder {
+    color: $iconGray;
+  }
+}
+
+.card-title {
+  font-size: .83em;
+}
+
+.wrapper {
+  margin-top: 10vh;
+  margin-right: 10%;
+  margin-left: 10%;
+  &__header {
+    padding-top: 1.875rem;
+  }
+  &__text {
+    padding: 1.25rem;
+    text-align: center;
+    line-height: 1.875rem;
+    font-size: .83em;
+  }
+  &__container {
+    padding: .625rem;
+    background: white;
+    border-radius: 1.25rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    color: black;
+    span {
+      color: $enjoyingBlue;
+    }
+    h1 {
+      font-weight: $boldWeight;
+      text-align: center;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &.right-panel-active &__signUp {
+    transform: translateX(0px);
+    opacity: 1;
+    z-index: 2;
+    transition: 0.4s ease-in-out; 
+  }
+  &.right-panel-active &__signIn {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  &__form {
+    width: 500px;
+    padding-left: .3125rem;
+    padding-right: .3125rem;
+    padding-top: .3125rem;
+    background: $heroGradient;
+    border-radius: 1.25rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  &__signIn {
+    transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.625rem;
+    padding-bottom: 5rem;
+    z-index: 1;
+    color: #fff;
+    h2 {
+      padding-bottom: 1.25rem;
+    }
+    label {
+      vertical-align: top;
+    }
+    input[type="checkbox"] {
+      margin-top: .125rem;
+      margin-right: .125rem;
+    }
+  }
+  &__signUp {
+    transform: translateX(-100px);
+    transition: 0.4s ease-in-out;
+    color: white;
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+  }
+  &__row { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 270px;
+    font-size: 0.75rem;
+    margin-top: -0.9375rem;
+  }
+  h2 {
+    font-weight: $boldWeight;
+  }
+  &__button {
+    background-color: #fff;
+    border-radius: 0.625rem;
+    border: none;
+    margin-top: 2.5rem;
+    margin-bottom: 0.625rem;
+    padding: 0.5rem 2.5rem;
+    color: $enjoyingBlue;
+    &--switch {
+      border: none;
+      padding: 0.5rem 2.5rem;
+      margin: 2.5rem 2.5rem;
+      margin-top: 1.875rem;
+      color: white;
+      background-color: transparent;
+      transition: 0.4s ease-in-out;
+      &:focus {
+        border-bottom: 2px solid white ; 
+      }
+    }
+  }
+}  
+
+button:hover {
+  font-weight: $boldWeight;
+}
+
+button#signIn, button#signUp, button#btnSignin, button#btnSignup {
+  outline: none;
+}
+
+a#btnManage:hover{
+  color:rgb(194, 194, 194);
+  cursor: pointer;  
+}
+
+span.close:hover{
+  cursor: pointer;
+  color: rgb(68,68,68);
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 3;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+div.modal-content {
+  background-color: #fefefe;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 400px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper__form {
+    width: auto;
+  }
+  .wrapper__button--switch {
+    padding: 0;
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <style>
+        body
+        {
+            color: rgb(89, 89, 89);
+        }
+
+        html,
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            height: 100%;
+        }
+
+        .card
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgb(240, 240, 240);
+            width: 40%;
+            padding: 30px;
+            border: 1px solid lightgray;
+        }
+
+
+        .container {
+            height: 100%;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        h3,
+        a {
+            color: #10A7EC;
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: 0px;
+            font-weight: 500;
+        }
+
+
+        .btn-primary {
+            background-color: #10A7EC !important;
+            border: 0px !important;
+            border-radius: 10px !important;
+            width: 200px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            padding:20px 5px;
+            color: white;
+            margin:auto;
+
+        }
+
+        .btn-primary:hover {
+            background-color: #34c2e0 !important;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .footer {
+            color: rgb(170, 170, 170)
+        }
+
+        small p {
+            margin: 0px;
+            text-align: center;
+        }
+        small{
+
+            padding-top:10px;
+        }
+.divforsmall
+{
+    margin-top:15px;
+}
+        @media only screen and (max-width: 768px) {
+
+            .card {
+                width: 70%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" ">
+        <div class="">
+
+            <div>
+                <div class="logo">
+                    <img src="https://scontent.fbeg2-1.fna.fbcdn.net/v/t1.0-9/130761541_3475385715886475_6298795998479492012_n.jpg?_nc_cat=102&ccb=2&_nc_sid=730e14&_nc_ohc=kXJsUdzBpRkAX-8klSG&_nc_ht=scontent.fbeg2-1.fna&oh=2d577b8483a3c57c088bc83a15edcb90&oe=5FF7640C"
+                        class="logo" />
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card-title">Hello, ${firstName} &#128075;</h3>
+                            <p>Please click button below to confirm your email adress:
+                            </p>
+                                <a href="${verificationLink}">
+                                    <div class="btn btn-primary">
+                                            CONFIRM EMAIL
+                                    </div>
+                                </a>
+                                <div class="divforsmall">
+                            <small>or paste the address into your browser: <br>
+                                <a href="${verificationLink}">${verificationLink}</a></small>
+                            </div>
+                            <div class="">
+                                <p>Once confirmed, this email will be uniquely associated with your Schedul.ing account.
+                                </p>
+                                <p>
+                                    Kind regards,</p>
+                                <p>
+                                    The Schedul.ing Team</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <small>
+                        <p>enjoy.ing d.o.o.</p>
+                        <p> Nikole Pasica 28,18000 Nis</p>
+                        <p> www.enjoying.rs</p>
+                        <p>&copy; 2020 - All rights reserved</p>
+                    </small>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

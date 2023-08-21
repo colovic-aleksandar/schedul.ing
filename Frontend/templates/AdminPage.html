@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../resources/favicon-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" href="../css/homePage.css">
+    <link rel="stylesheet" href="../css/userPage.css">
+    <link rel="stylesheet" href="../css/adminPage.css">
+    <link rel="stylesheet" href="../resources/css/all.css">
+    <!-- hamburgers css -->
+    <link href="../Resources/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+
+    <script src="../js/datedropper.js"></script>
+    <link rel="stylesheet" href="../css/datedropper.css" />
+    <title>Schedul.ing</title>
+</head>
+
+<body>
+    <div id="main" class="wrapper__homepage">
+        <aside class="wrapper__dashboard">
+            <div class="wrapper__dashboard_toggle">
+            <header class="wrapper__dashboard_header">
+                <img id="asset" src="../resources/enjoying logo/2x/asset.png" alt="Logo" class="wrapper__dashboard_header_logo"
+                    width="150px" height="auto" />
+            </header>
+            <button class="navbar-toggler hamburger--spring wrapper__dashboard_toggle--button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            </div>
+            <div class="collapseContainer" id="navbarToggleExternalContent">
+            <div class="dropdown wrapper__main_nav--buttonContainer-sd">
+                <button class="btn wrapper__main_nav--button-sd" type="button">
+                    <div class="wrapper__main_nav--avatar-sd"></div>
+                    <a href="./UserPage.html" class="wrapper__main_nav--button-sd-text">Avatar Aang</a>
+                    </button>
+            </div>
+            <div class="wrapper__dashboard_home sidebarLinkContainer">
+                <i class="far fa-list-alt wrapper__dashboard_home--icon sidebarIcon"></i>
+                <a class="wrapper__dashboard_home--text sidebarLink" href="./HomePage.html">Dashboard</a>
+            </div>
+            <div class="wrapper__dashboard_events sidebarLinkContainer">
+                <i class="far fa-calendar wrapper__dashboard_events--icon sidebarIcon"></i>
+                <a class="wrapper__dashboard_events--text sidebarLink" href="./eventsPage.html">Events</a>
+            </div>
+            <div class="wrapper__dashboard_users sidebarLinkContainer">
+                <i class="fas fa-users wrapper__dashboard_users--icon sidebarIcon"></i>
+                <a class="wrapper__dashboard_users--text sidebarLink" href="./UsersPage.html">Users</a>
+            </div>
+            <div class="wrapper__dashboard_logout sidebarLinkContainer">
+                <i class="fas fa-long-arrow-alt-left wrapper__dashboard_logout--icon sidebarIcon"></i>
+                <a class="wrapper__dashboard_logout--text sidebarLink" href="logout">Logout</a>
+            </div>
+            </div>
+        </aside>
+        <div class="wrapper__main px-3">
+            <nav class="navbar wrapper__main_nav">
+                <div class="dropdown wrapper__main_nav--buttonContainer">
+                    <button class="btn wrapper__main_nav--button" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="inverted">Avatar Aang</span>
+                        <div class="wrapper__main_nav--avatar">
+
+                        </div>
+                    </button>
+                    <div class="dropdown-menu white " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="../templates/UserPage.html">View Profile</a>
+                        <a class="dropdown-item " href="logout">Log Out</a>
+                        <a id="button-check"  class="dropdown-item  white-font" href="#">
+                            <span id="off-on" class=""></span> Dark Mode
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div id="container" class="wrapper__user overflow-auto py-3 px-5">
+                <div class="d-flex justify-content-between align-items-center wrapper__user_container">
+                    <h3 class="font-weight-bold wrapper__user_container--title">Admin Dashboard</h3>
+                    <div id="btnManage" class="btn btn-primary wrapper__user_container--button">Manage Events Type</div>
+                </div>
+                <div class="row table-events  mr-0 tableContainer__events">
+                    <div class="col-2 pr-0 mr-0">
+                        <h4 class="">Events</h4>
+                    </div>
+                    <div class="col-8 mt-5 d-flex">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Event Type</th>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Host</th>
+                                    <th scope="col">Attendees</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sony Gaming</td>
+                                    <td>Sony Afterwork</td>
+                                    <td>Aleksandar Colovic</td>
+                                    <td>4</td>
+                                    <td>16-11-2020 9AM</td>
+                                    <td class="d-flex flex-row">
+                                            <button class="btn btns mx-2"> <i class="fas fa-trash"></i></button>
+                                            <button class="btn btns"><i class="fas fa-pen"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row table-events  mr-0 tableContainer__users">
+                    <div class="col-2 pr-0 mr-0">
+                        <h4 class="">Users</h4>
+                    </div>
+                    <div class="col-8 mt-5 d-flex">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Seniority</th>
+                                    <th scope="col">Position</th>
+                                    <th scope="col">Role</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Milan Stamenkovic</td>
+                                    <td>01.01.1995</td>
+                                    <td>123/4567890</td>
+                                    <td>Senior</td>
+                                    <td>Sidebar Developer</td>
+                                    <td>User</td>
+                                    
+                                    <td  class="wrapper__column d-flex flex-row">
+                                            <button class=" btns btn mx-2"> <i class="fas fa-trash"></i></button>
+                                            <button class="btn btns"><i class="fas fa-pen"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Milan Stamenkovic</td>
+                                    <td>01.01.1995</td>
+                                    <td>123/4567890</td>
+                                    <td>Senior</td>
+                                    <td>Sidebar Developer</td>
+                                    <td>User</td>
+                                    
+                                    <td  class="wrapper__column d-flex flex-row">
+                                            <button class=" btns btn mx-2"> <i class="fas fa-trash"></i></button>
+                                            <button class="btn btns"><i class="fas fa-pen"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="manageModal" class="manageModal">
+
+        <!-- Modal content -->
+        <div class="modal-content ">
+            <div class="row d-flex justify-content-end pb-3 pr-3">
+                <span class="close">&times;</span>
+            </div>
+            <div class="container">
+                <div class="row d-flex justify-content-center">   
+                        <h4>Events Type</h4>  
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row d-flex justify-content-around ">   
+                    <form action="">
+                        <input class="mx-2" type="text" placeholder="Event type name">
+                        <div id="btnEventManage" class="btn btn-primary mx-2 ">Add Event Type</div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="container mt-3 mx-3">
+                <div class="row d-flex justify-content-center">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Types</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sony</td>
+                                <td>
+                                        <button class="btn btns mx-2"> <i class="fas fa-trash"></i></button>
+                                        <button class="btn btns"><i class="fas fa-pen"></i></button>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Sony</td>
+                                <td>
+                                    <div class="btns ">
+                                        <button class="btn mx-2"> <i class="fas fa-trash"></i></button>
+                                        <button class="btn"><i class="fas fa-pen"></i></button>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Sony</td>
+                                <td>
+                                    <div class="btns ">
+                                        <button class="btn mx-2"> <i class="fas fa-trash"></i></button>
+                                        <button class="btn"><i class="fas fa-pen"></i></button>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Sony</td>
+                                <td>
+                                    <div class="btns ">
+                                        <button class="btn mx-2"> <i class="fas fa-trash"></i></button>
+                                        <button class="btn"><i class="fas fa-pen"></i></button>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Sony</td>
+                                <td>
+                                    <div class="btns ">
+                                        <button class="btn mx-2"> <i class="fas fa-trash"></i></button>
+                                        <button class="btn"><i class="fas fa-pen"></i></button>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loader" class="page-loader">
+        <div id="lottie"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/adminPage.js"></script>
+    <script src="../js/pageLoader.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

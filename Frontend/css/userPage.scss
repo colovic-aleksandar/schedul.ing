@@ -1,0 +1,185 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./homePage.scss";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.white
+{
+  background-color: $whitebg!important;
+}
+
+.dropdown-item{
+    color:$black!important;
+    &:hover{
+        background-color: $whitebg!important;
+    }
+    
+}
+.btn-primary
+{
+  border-radius:10px!important;
+  border:0px!important;
+  background-color:$enjoyingBlue!important;
+  &:hover{
+    background-color: $lightBlue!important;
+    color:$white!important;
+  }
+}
+
+.fontAwesome {
+  background-color: $inputGray;
+  padding-left: 10px;
+  font-family: Arial, FontAwesome;
+  margin: 10px;
+  background-color: $inputGray;
+  border:$white;
+  border-radius: 8px;
+  width: 270px;
+  height: 40px;
+  outline: none;
+  &::placeholder {
+    color: $iconGray;
+  }
+}
+
+
+p {
+  font-weight: 500 !important;
+}
+#container {
+  height: 90vh;
+}
+.wrapper {
+  &__main {
+    background: linear-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+
+  &__input {
+    width: 180px !important;
+    &--wide {
+      width: 380px !important;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    text-align: center;
+  }  
+
+  &__user {
+    position: relative;
+    background-color: $whitebg;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  &__photo {
+    position: relative;
+    border: 2px solid $enjoyingBlue;
+    border-radius: 50%;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  &__wraper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__headerPhoto {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+  }
+
+  &__btnBadge {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -35px;
+    border-radius: 50px !important;
+    width: 45px;
+    height: 45px;
+    background-color:  $whitebg !important;
+    span {
+      padding-left: 3px !important;
+      background-color:  $whitebg !important;
+  }
+  }
+  
+
+  &__btn {
+    width: 150px;
+    &--edit {
+      background-color: $enjoyingBlue !important;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    &__edit {
+      background: $white;
+      height: 100%;
+      h2 {
+        font-weight: $boldWeight;
+      }
+    }
+  }
+}
+
+.btnBadge {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -35px;
+  border-radius: 50px !important;
+  width: 45px;
+  height: 45px;
+  background-color: $whitebg !important;
+}
+.badge {
+    padding-left: 3px !important;
+    background-color: $whitebg!important;
+    color:$black!important;
+    
+}
+
+@media only screen and (max-width: 768px) {
+ 
+  #container {
+    height: 95vh;
+  }
+  .wrapper {
+    &__main{ 
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      font-size: 14px;  
+      font-weight: 500;
+    }
+    &__input {
+      width: 200px !important;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      &--wide {
+        width: 200px !important;
+        text-align: left;
+        margin: 0;
+      }
+    }
+    &__edit {
+      padding-top:50px;
+      padding-bottom:40px;
+    }
+    &__photo {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
